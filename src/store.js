@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import productsReducer from './slices/productsSlice';
+import reviewsReducer from './slices/reviewsSlice';
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     products: productsReducer,
+    reviews: reviewsReducer,
   },
 });
+
+export default store;

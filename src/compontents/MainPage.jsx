@@ -1,4 +1,8 @@
 import { useQuery } from "react-query";
+import { useDispatch, useSelector } from "react-redux";
+import { setProducts } from "../slices/productsSlice";
+import { setReviews } from "../slices/reviewsSlice";
+import { useEffect } from "react";
 
 import TheMain from "./TheMain";
 import Card from "../UI/Card";
@@ -110,31 +114,14 @@ const fetchProductsAndReviews = async () => {
 };
 
 export default function MainPage({ title, text }) {
-  const { data, isLoading, isError, error } = useQuery(
-    "productsAndReviews",
-    fetchProductsAndReviews
-  );
+  const productsArray = Object.values(
+    useSelector((state) => state.products)
+  ).slice(0, 6);
 
-  if (isLoading) {
-    return (
-      <>
-        <TheMain title={title} text={text} />
-        <div>Loading...</div>
-      </>
-    );
-  }
+  const reviewsArray = Object.values(
+    useSelector((state) => state.reviews)
+  ).slice(0, 3);
 
-  if (isError) {
-    return (
-      <>
-        <TheMain title={title} text={text} />
-        <div>Error loading products: {error.message}</div>;
-      </>
-    );
-  }
-
-  const productsArray = Object.values(data.products).slice(0, 6);
-  const reviewsArray = Object.values(data.reviews).slice(0, 3);
   return (
     <>
       <TheMain title={title} text={text} />
