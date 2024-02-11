@@ -4,6 +4,7 @@ import MainPage from "./compontents/MainPage";
 import ReviewsPage from "./compontents/ReviewsPage";
 import TheFooter from "./compontents/TheFooter";
 import TheMain from "./compontents/TheMain";
+import ContactsPage from "./compontents/ContactsPage";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "./slices/productsSlice";
 import { setReviews } from "./slices/reviewsSlice";
@@ -60,6 +61,18 @@ function App() {
         <Route
           path="/reviews"
           element={<ReviewsPage title={"Отзывы"} text={"лодки & моторы"} />}
+        />
+        <Route
+          path="/contacts"
+          element={<ContactsPage title={"Контакты"} text={"лодки & моторы"} />}
+        />
+        <Route
+          path="/delivery"
+          element={<TheMain title={"Страница"} text={"в разработке"} />}
+        />
+        <Route
+          path="/about"
+          element={<ContactsPage title={"О нас"} text={"лодки & моторы"} />}
         />
         <Route
           path="*"

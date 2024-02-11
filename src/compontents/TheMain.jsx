@@ -109,7 +109,7 @@ export default function TheMain({ title, text }) {
             />
           </div>
 
-          <div className="flex flex-row justify-between items-center space-x-12">
+          {/* <div className="flex flex-row justify-between items-center space-x-12">
             <img src={searchIcon} alt="" />
             <div className="flex flex-col items-center justify-between space-y-1">
               <StyledInput type="text" placeholder="Поиск" />
@@ -117,7 +117,7 @@ export default function TheMain({ title, text }) {
             </div>
             <img src={peopleIcon} alt="" />
             <img src={basketIcon} alt="" />
-          </div>
+          </div> */}
         </div>
         <div className="pt-32 space-y-32 text-white">
           <div className="flex flex-col justify-center items-center space-y-16">
