@@ -1,10 +1,10 @@
 import { Routes, Link, Route, Navigate } from "react-router-dom";
 
-import MainPage from "./compontents/MainPage";
-import ReviewsPage from "./compontents/ReviewsPage";
-import TheFooter from "./compontents/TheFooter";
-import TheMain from "./compontents/TheMain";
-import ContactsPage from "./compontents/ContactsPage";
+import MainPage from "./components/MainPage";
+import ReviewsPage from "./components/ReviewsPage";
+import TheFooter from "./components/TheFooter";
+import TheMain from "./components/TheMain";
+import ContactsPage from "./components/ContactsPage";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "./slices/productsSlice";
 import { setReviews } from "./slices/reviewsSlice";
